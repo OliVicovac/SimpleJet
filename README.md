@@ -1,2 +1,2 @@
 # SimpleJet
- A simple chat.
+ A simple chat. :airplane:
