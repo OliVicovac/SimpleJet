@@ -18,9 +18,9 @@
         android:hint="@string/pw" />
 
     <Button
-        android:id="@+id/btn_sign_up"
+        android:id="@+id/btn_login"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:text="@string/register" />
+        android:text="@string/login" />
 </LinearLayout>

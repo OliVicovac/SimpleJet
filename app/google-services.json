@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "915463395640",
+    "firebase_url": "https://simplejet-494f9.firebaseio.com",
+    "project_id": "simplejet-494f9",
+    "storage_bucket": "simplejet-494f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915463395640:android:70580d4fc3008c9877c9cd",
+        "android_client_info": {
+          "package_name": "com.example.simplejet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915463395640-7qdcbp7j9lg0ib9oieds2lb1b0mlbnhl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOQyhyF5nynxXd4J5F8nnCRwa1HtqrHzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915463395640-7qdcbp7j9lg0ib9oieds2lb1b0mlbnhl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
