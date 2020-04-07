@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SimpleJet</string>
+    <string name="send">fly</string>
+    <string name="pw">password</string>
+    <string name="email">email</string>
+    <string name="username">username</string>
+    <string name="login">login</string>
+    <string name="register">register</string>
 </resources>
