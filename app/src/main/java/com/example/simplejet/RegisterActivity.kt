@@ -26,6 +26,9 @@ class  RegisterActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         updateUI(currentUser)
     }
+    fun updateUI(currentUser : FirebaseUser?){
+
+    }
 
     private fun signUpUser(){
         if (text_email.text.toString().isEmpty()){
@@ -50,14 +53,10 @@ class  RegisterActivity : AppCompatActivity() {
                     startActivity(Intent(this, LoginActivity::class.java))
                     finish()
                 } else {
-                    // If sign in fails, display a message to the user.
                     Toast.makeText(baseContext, "Sign Up failed.",
                         Toast.LENGTH_SHORT).show()
                 }
             }
-
-    }
-    fun updateUI(currentUser : FirebaseUser?){
 
     }
 }
