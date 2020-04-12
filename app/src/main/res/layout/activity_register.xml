@@ -7,27 +7,36 @@
     android:paddingRight="16dp"
     android:orientation="vertical"
     tools:context="com.example.simplejet.RegisterActivity"
-    android:background="@drawable/ic_launcher_background">
+    android:background="@drawable/background_orange">
+
     <ImageView
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"/>
-
-    <EditText
-        android:id="@+id/text_email"
+    <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/email" />
-    <EditText
-        android:id="@+id/text_pw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/pw" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_sign_up"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="@string/register" />
+        <EditText
+            android:id="@+id/text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:textColor="#FFFFFF" />
+        <EditText
+            android:id="@+id/text_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pw" />
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/register" />
+    </LinearLayout>
 </LinearLayout>
