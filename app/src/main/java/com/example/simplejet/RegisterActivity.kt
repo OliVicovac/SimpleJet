@@ -3,6 +3,7 @@ package com.example.simplejet
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.Toast
@@ -14,22 +15,13 @@ import kotlinx.android.synthetic.main.activity_register.*
 class  RegisterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
-        auth = FirebaseAuth.getInstance()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+        auth = FirebaseAuth.getInstance()
 
         btn_sign_up.setOnClickListener{
             signUpUser()
         }
-    }
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
-    }
-    fun updateUI(currentUser : FirebaseUser?){
-
     }
 
     private fun signUpUser(){
@@ -52,8 +44,16 @@ class  RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(text_email.text.toString(), text_pw.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(this, LoginActivity::class.java))
-                    finish()
+                    val user = auth.currentUser
+
+                    user!!.sendEmailVerification()
+                        .addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                startActivity(Intent(this, LoginActivity::class.java))
+                                finish()
+                            }
+                        }
+
                 } else {
                     Toast.makeText(baseContext, "Sign Up failed.",
                         Toast.LENGTH_SHORT).show()
