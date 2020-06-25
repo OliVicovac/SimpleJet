@@ -7,4 +7,6 @@
     <string name="login">login</string>
     <string name="register">register</string>
     <string name="submit">submit</string>
+    <string name="have_account">I already have a account</string>
+    <string name="no_account">I don\'t have a account</string>
 </resources>
