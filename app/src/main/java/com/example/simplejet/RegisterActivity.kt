@@ -26,23 +26,23 @@ class  RegisterActivity : AppCompatActivity() {
     }
 
     private fun signUpUser(){
-        if (text_email.text.toString().isEmpty()){
+        if (text_email.editText?.text.toString().isEmpty()){
             text_email.error="Please Enter email"
             text_email.requestFocus()
             return
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(text_email.text.toString()).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(text_email.editText?.text.toString()).matches()){
             text_email.error="Please  valid email"
             text_email.requestFocus()
             return
         }
-        if (text_pw.text.toString().isEmpty()){
+        if (text_pw.editText?.text.toString().isEmpty()){
             text_pw.error="Please Enter password"
             text_pw.requestFocus()
             return
         }
 
-        auth.createUserWithEmailAndPassword(text_email.text.toString(), text_pw.text.toString())
+        auth.createUserWithEmailAndPassword(text_email.editText?.text.toString(), text_pw.editText?.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
