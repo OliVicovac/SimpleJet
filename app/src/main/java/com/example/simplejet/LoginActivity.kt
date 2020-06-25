@@ -2,18 +2,14 @@ package com.example.simplejet
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_register.*
-import kotlinx.android.synthetic.main.activity_register.text_email
-import kotlinx.android.synthetic.main.activity_register.text_pw as text_pw1
+
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -25,10 +21,6 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         btn_no_account.setOnClickListener{
-            setContentView(R.layout.activity_register)
-        }
-
-        btn_sign_up.setOnClickListener{
             startActivity(Intent(this, RegisterActivity::class.java))
             finish()
         }
