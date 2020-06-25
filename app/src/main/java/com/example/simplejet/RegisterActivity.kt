@@ -16,7 +16,8 @@ class  RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         btn_have_account.setOnClickListener{
-            setContentView(R.layout.activity_login)
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
 
         btn_sign_up.setOnClickListener{
@@ -46,8 +47,8 @@ class  RegisterActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val user = auth.currentUser
 
-                    user!!.sendEmailVerification()
-                        .addOnCompleteListener { task ->
+                    user?.sendEmailVerification()
+                        ?.addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 startActivity(Intent(this, LoginActivity::class.java))
                                 finish()
