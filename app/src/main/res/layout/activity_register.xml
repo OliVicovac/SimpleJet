@@ -3,28 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical"
     tools:context="com.example.simplejet.RegisterActivity"
     android:background="@color/colorGrey">
 
-    <ImageView
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/simplejet_logo"/>
     <LinearLayout
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/simplejet_logo"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email">
+            android:hint="@string/email"
+            app:boxBackgroundColor="#FFFFFF">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -36,7 +39,8 @@
             android:id="@+id/text_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/pw">
+            android:hint="@string/pw"
+            app:boxBackgroundColor="#FFFFFF">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -51,14 +55,15 @@
             android:layout_gravity="center"
             android:text="@string/register"
             style="@style/MyButton"/>
-
-        <Button
-            android:id="@+id/btn_have_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/have_account"
-            style="@style/MyButton"/>
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/have_account"
+        android:layout_marginTop="100dp"
+        style="@style/MyButton"/>
+
 </LinearLayout>
